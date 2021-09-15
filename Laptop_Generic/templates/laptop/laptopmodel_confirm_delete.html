@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Delete page</title>
+{% endblock %}
+
+{% block content %}
+<div style="width: 60%;margin: 2% 20%;">
+    <form method="POST" class="jumbotron">
+        {% csrf_token %}
+    <h1>Are you sure to Delete this data {{object}}</h1><br>
+    <button type="submit" class="btn btn-danger btn-lg">Confirm</button>
+    </form>
+</div>
+{% endblock %}
